@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -32,6 +33,19 @@ public class ContactDetailsActivity extends AppCompatActivity implements View.On
         actionBar.setTitle("");
 
         inIt();
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+
+        }
+        return (super.onOptionsItemSelected(menuItem));
+
     }
 
     private void inIt() {
